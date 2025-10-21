@@ -64,7 +64,7 @@ self.addEventListener('fetch', event => {
             caches.match(event.request)
                 .then(response => {
                     // Devolvemos la respuesta de caché o un error 500 si falta el archivo
-                    return response || new Response('App Shell Asset Missing', { status: 500 });
+                    return response || new Response('App Shell Asset Missing', { status: 500 });z
                 })
         );
         return;
