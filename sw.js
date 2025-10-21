@@ -5,12 +5,12 @@ const CACHE_NAME = 'cocktail-pwa-v2';
 
 // 1. Recursos del App Shell (Cache Only)
 const appShellAssets = [
-    '/',
-    '/index.html',
-    '/main.js',
-    '/styles/main.css',
-    '/scripts/app.js',
-    '/styles/200x300.svg'
+    './',
+    './index.html',
+    './main.js',
+    './styles/main.css',
+    './scripts/app.js',
+    './styles/200x300.svg'
 ];
 
 // 2. JSON de Fallback para la API (usado cuando la red falla)
@@ -21,7 +21,7 @@ const OFFLINE_COCKTAIL_JSON = {
         strTags: "FALLBACK",
         strCategory: "Desconectado",
         strInstructions: "No pudimos obtener resultados en este momento. Este es un resultado GENÉRICO para demostrar que la aplicación NO SE ROMPE. Intenta conectarte de nuevo.",
-        strDrinkThumb: "/styles/200x300.svg", // Imagen local de fallback
+        strDrinkThumb: "./styles/200x300.svg", // Imagen local de fallback
         strIngredient1: "Servicio Worker",
         strIngredient2: "Fallback JSON"
     }]
@@ -55,7 +55,7 @@ self.addEventListener('fetch', event => {
     const isAppShellRequest = (
         requestUrl.origin === self.location.origin && // Mismo origen
         appShellAssets.some(asset => // Coincide con algún recurso del App Shell
-            requestUrl.pathname.endsWith(asset.replace('/', '')) // Ajuste para rutas relativas
+            requestUrl.pathname.endsWith(asset.replace('./', '')) // Ajuste para rutas relativas
         )
     );
     if (isAppShellRequest) {
