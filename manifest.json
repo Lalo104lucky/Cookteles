@@ -1,7 +1,7 @@
 {
     "name": "Mi Only Cache de Cocteles",
     "short_name": "Only Cache Cocteles",
-    "start_url": "./",
+    "start_url": "/Cookteles/",
     "display": "standalone",
     "background_color": "#1A202C",
     "theme_color": "#4A90E2",
