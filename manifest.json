@@ -1,5 +1,3 @@
-// Duda, si yo quiero que mi PWA se vea en dispositivos móviles y lo tengo por medio de esta URL: https://lalo104lucky.github.io/Cookteles/, ¿cómo le hago para que el manifest.json tenga la URL correcta para que funcione bien en móviles?
-
 {
     "name": "Mi Only Cache de Cocteles",
     "short_name": "Only Cache Cocteles",
