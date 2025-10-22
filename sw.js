@@ -58,7 +58,7 @@ self.addEventListener('fetch', event => {
     const isAppShellRequest = (
         requestUrl.origin === self.location.origin && // Mismo origen
         appShellAssets.some(asset => // Coincide con algún recurso del App Shell
-            requestUrl.pathname.endsWith(asset.replace('./', '')) // Ajuste para rutas relativas
+            requestUrl.pathname.endsWith(asset.replace('Cookteles/', '')) // Ajuste para rutas relativas
         )
     );
     if (isAppShellRequest) {
