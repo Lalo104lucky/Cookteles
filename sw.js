@@ -5,15 +5,15 @@ const CACHE_NAME = 'cocktail-pwa-v2';
 
 // 1. Recursos del App Shell (Cache Only)
 const appShellAssets = [
-    '/Cookteles/',
-    '/Cookteles/index.html',
-    '/Cookteles/main.js',
-    '/Cookteles/styles/main.css',
-    '/Cookteles/scripts/app.js',
-    '/Cookteles/styles/200x300.svg',
-    '/Cookteles/images/icons/192.png',
-    '/Cookteles/images/icons/512.png',
-    '/Cookteles/manifest.json'
+    './',
+    './index.html',
+    './main.js',
+    './styles/main.css',
+    './scripts/app.js',
+    './styles/200x300.svg',
+    './images/icons/192.png',
+    './images/icons/512.png',
+    './manifest.json'
 ];
 
 // 2. JSON de Fallback para la API (usado cuando la red falla)
@@ -58,7 +58,7 @@ self.addEventListener('fetch', event => {
     const isAppShellRequest = (
         requestUrl.origin === self.location.origin && // Mismo origen
         appShellAssets.some(asset => // Coincide con algún recurso del App Shell
-            requestUrl.pathname.endsWith(asset.replace('Cookteles/', '')) // Ajuste para rutas relativas
+            requestUrl.pathname.endsWith(asset.replace('./', '')) // Ajuste para rutas relativas
         )
     );
     if (isAppShellRequest) {
